@@ -22,8 +22,6 @@ Belangrijk: Geen opmerkingen over persoonlijke omstandigheden. Wees zakelijk, fe
 # initial_response = "come on..."
 # number_of_sentences = 2
 
-
-
 def response_generator(emails_to_respond_to, response_instructions, model="gpt-3.5-turbo"):
     gpt_4_prompt = f"""Emails om op te reageren:\n{emails_to_respond_to}\n\nInstructies voor de te genereren email:\n{response_instructions}\n\nGeef als output een JSON met de volgende twee keys: Email_1, Email_2.\n\nvoorbeeld formaat:\n{{\\"Email_1\\": \\"Beste Klaas,\\\\n\\\\nDit is een voorbeeld email.\\\\n\\\\nGroeten,\\\\nJohan\\", \\"Email_2\\": \\"Hallo Klaas,\\\\n\\\\nDit is een andere voorbeeld email.\\\\n\\\\nVriendelijke groet,\\\\nJohan\\"}}"""
     gpt_3_prompt = f"""Emails om op te reageren:\n{emails_to_respond_to}\n\nInstructies voor de te genereren email:\n{response_instructions}\n\nGeef als output een JSON met de volgende twee keys: Email_1, Email_2.\n\nvoorbeeld formaat:\n{{\\"Email_1\\": \\"Beste Klaas,\\\\n\\\\nDit is een voorbeeld email.\\\\n\\\\nGroeten,\\\\nJohan\\", \\"Email_2\\": \\"Hallo Klaas,\\\\n\\\\nDit is een andere voorbeeld email.\\\\n\\\\nVriendelijke groet,\\\\nJohan\\"}}"""
